@@ -42,13 +42,13 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-bookapp-background">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-bookapp-primary mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-bookapp-accent mb-4">
             Are you ready to start?
           </h1>
-          <p className="text-lg text-bookapp-muted max-w-3xl mx-auto">
+          <p className="text-lg text-bookapp-text max-w-3xl mx-auto">
             Discover your next favorite book with our personalized recommendation engine.
             Fill in your preferences below and let us suggest the perfect reads for you.
           </p>
@@ -63,7 +63,7 @@ const Index: React.FC = () => {
 
         {isLoading && (
           <div className="flex justify-center my-12">
-            <div className="animate-pulse text-lg text-bookapp-accent">
+            <div className="animate-bounce text-lg text-bookapp-accent">
               Finding the perfect books for you...
             </div>
           </div>

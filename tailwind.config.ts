@@ -64,13 +64,15 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				bookapp: {
-					primary: '#1A1F2C',
-					secondary: '#0EA5E9',
-					accent: '#8B5CF6',
-					background: '#FFFFFF',
-					text: '#1A1F2C',
-					light: '#E5DEFF',
-					muted: '#8E9196'
+					primary: '#58cc02', // Duolingo green
+					secondary: '#1cb0f6', // Duolingo blue
+					accent: '#8549ba',    // Duolingo purple
+					background: '#fafafa',
+					text: '#4b4b4b',
+					light: '#e9e9e9',
+					muted: '#777777',
+					danger: '#ff4b4b',
+					warning: '#ffc800'
 				}
 			},
 			borderRadius: {
@@ -98,12 +100,17 @@ export default {
 				'fade-in': {
 					'0%': { opacity: '0' },
 					'100%': { opacity: '1' }
+				},
+				'bounce': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out'
+				'fade-in': 'fade-in 0.5s ease-out',
+				'bounce': 'bounce 1s infinite'
 			}
 		}
 	},

@@ -33,7 +33,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -91,19 +91,53 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   }
 }
 
+/* Duolingo-inspired styles */
 .book-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: var(--radius);
 }
 
 .book-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(116, 76, 188, 0.15);
 }
 
 .multi-select-dropdown .dropdown-content {
   max-height: 200px;
   overflow-y: auto;
+  border-radius: var(--radius);
 }
+
+/* Duolingo-inspired animations */
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.5s ease-out forwards;
+}
+
+/* Input styling */
+input, select, button {
+  border-radius: var(--radius) !important;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s;
+}
+
